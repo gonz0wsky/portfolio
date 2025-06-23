@@ -31,11 +31,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Listar archivos en el workspace
-        run: ls -la
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: dist
